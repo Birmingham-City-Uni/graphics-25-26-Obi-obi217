@@ -16,6 +16,7 @@ public:
 		:x_(0), y_(0)
 	{
 		// YOUR CODE HERE
+		
 	}
 
 	// This constructor can be used to set the x, y and z components of a vector when it
@@ -114,12 +115,19 @@ public:
 		// To implement it here, we're interpreting these vectors as 3D vectors with a z-component of 0
 		// We're only returning a float (which is the z-component of the resulting vector)
 		// If you think about it, the x and y components of this output vector will always be 0.
+		float ans = x_ * other.y() - y_ * other.x();
+
+
+		return ans;
 	}
 
 	const float dot(const Vector2& other)
 	{
 		// YOUR CODE HERE
 		// Implement the dot product, following the formula from the slides.
+		float ans = x_ * other.x() + y_ * other.y();
+
+		return ans;
 	}
 
 private:

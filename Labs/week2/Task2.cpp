@@ -27,17 +27,37 @@ void drawLine(std::vector<uint8_t>& image, int width, int height, int startX, in
 	//Step 1: work out the gradient
 	float gradient;
 
+	gradient = float(endY - startY) / float(endX - startX);
+
 	// Step 2: check if it's steep (i.e. absolute value bigger than 1;)
 	bool steep;
+	if (gradient > 1.0f || gradient < -1.0f) {
+		steep = true;
+	}
+	else {
+		steep = false;
+	}
 
 	if (steep) {
 		// Step 3: The steep version of the code, iterating over Y
 		// First, make sure that startY is less than endY. 
 		// If they're in the wrong order, swap both X and Y.
 
+		if (startY > endY) {
+			int tempY;
+			int tempX;
+			tempY = startY;
+			startY = endY;
+			endY = tempY;
+			tempX = startX;
+			startX = endX;
+			endX = tempX;
+		}
+
 		// Now, iterate from startY to endY. 
 		for (int y = startY; y <= endY; ++y) {
 			// Draw the line, following the formula!
+			int x = startX + (y - startY / gradient);
 		}
 	}
 	else {
@@ -45,9 +65,21 @@ void drawLine(std::vector<uint8_t>& image, int width, int height, int startX, in
 		// First, make sure that startx is less than endX. 
 		// If they're in the wrong order, swap both X and Y.
 
+		if (startX > endX) {
+			int tempY;
+			int tempX;
+			tempY = startY;
+			startY = endY;
+			endY = tempY;
+			tempX = startX;
+			startX = endX;
+			endX = tempX;
+		}
+
 		// Now, iterate from startY to endY. 
 		for (int x = startX; x <= endX; ++x) {
 			// Draw the line, following the formula!
+			int y = startY + gradient * (x - startX);
 		}
 	}
 }
@@ -104,6 +136,11 @@ int main()
 			// This time we care about faces!
 			// Load this face from the line, pushing it back into the list of faces.
 			// Be careful to ignore the "/" characters, and the extra texture and normal indices.
+			int idv;
+			int idTex;
+			int idNorm;
+
+			for ()
 		}
 	}
 

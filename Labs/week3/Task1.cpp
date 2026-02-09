@@ -4,6 +4,7 @@
 #include <sstream>
 #include "Vector3.hpp"
 #include "Vector2.hpp"
+#include <algorithm>
 
 // The goal for this lab is to draw a triangle mesh loaded from an OBJ file from scratch.
 // This time, we'll draw the mesh as a solid object, rather than just a wireframe or collection
@@ -35,17 +36,30 @@ void drawTriangle(std::vector<uint8_t>& image, int width, int height,
 	// YOUR CODE HERE
 	int minX = 0, minY = 0, maxX = 0, maxY = 0;
 
+	minX = std::min(p0.x(), p1.x(), p2.x());
+	minY = std::min(p0.y(), p1.y(), p2.y());
+	maxX = std::max(p0.x(), p1.x(), p2.x());
+	maxY = std::max(p0.y(), p1.y(), p2.y());
+	
+
 	// Check your minX, minY, maxX and maxY values don't lie outside the image!
 	// This would cause errors if you attempt to draw there.
 	// That is, clamp these values so that 0 <= x < width and 0 <= y < height.
 
 	// YOUR CODE HERE
+	std::clamp(minX, 0, width);
+	std::clamp(minY, 0, height);
+	std::clamp(maxX, 0, width);
+	std::clamp(maxY, 0, height);
 
 	// Find vectors going along two edges of the triangle
 	// from p0 to p1, and from p1 to p2.
 
 	// YOUR CODE HERE
 	Vector2 edge1, edge2;
+
+	edge1 = Vector2(p1.x() - p0.x(), p1.y() - p0.y());
+	edge2 = Vector2(p2.x() - p1.x(), p2.y() - p1.y());
 
 	// Find the area of the triangle using a cross product.
 	// Optional: You can use the sign of the cross product to see if this triangle is facing towards
@@ -55,6 +69,8 @@ void drawTriangle(std::vector<uint8_t>& image, int width, int height,
 
 	// YOUR CODE HERE
 	float triangleArea = 0.0f;
+
+
 
 	// Now let's actually draw the triangle!
 	// We'll do a for loop over all pixels in the bounding box.
