@@ -115,9 +115,9 @@ void drawMesh(std::vector<unsigned char>& image, const Mesh& mesh,
 		// The matrix is 4x4, and the v0, v1, v2 are 3D! You'll need to convert them to 4D 
 		// homogeneous vectors first (add a 1 in the w component).
 		// You can use the vec3ToVec4 function above to do this.
-		tv0 = Eigen::Vector4f::Zero();
-		tv1 = Eigen::Vector4f::Zero();
-		tv2 = Eigen::Vector4f::Zero();
+		tv0 = transform * vec3ToVec4(v0);
+		tv1 = transform * vec3ToVec4(v1);
+		tv2 = transform * vec3ToVec4(v2);
 
 		Eigen::Vector2f p0(tv0.x() * 250 + width / 2, -tv0.y() * 250 + height / 2);
 		Eigen::Vector2f p1(tv1.x() * 250 + width / 2, -tv1.y() * 250 + height / 2);
@@ -143,14 +143,28 @@ void drawMesh(std::vector<unsigned char>& image, const Mesh& mesh,
 Eigen::Matrix4f translationMatrix(const Eigen::Vector3f& t)
 {
 	// *** Your code here ***
-	return Eigen::Matrix4f::Identity();
+	Eigen::Matrix4f e;
+	e <<
+		1, 0, 0, t.x(),
+		0, 1, 0, t.y(),
+		0, 0, 1, t.z(),
+		0, 0, 0, 1;
+
+	return e;
 }
 
 // Implement this function that makes a uniform scaling matrix
 Eigen::Matrix4f scaleMatrix(float s)
 {
+	Eigen::Matrix4f scale;
+	scale <<
+		s, 0, 0, 0,
+		0, s, 0, 0,
+		0, 0, s, 0,
+		0, 0, 0, 1;
+
 	// *** Your code here ***
-	return Eigen::Matrix4f::Identity();
+	return scale;
 }
 
 // Implement this function that makes a rotation matrix around the y
@@ -159,7 +173,15 @@ Eigen::Matrix4f scaleMatrix(float s)
 Eigen::Matrix4f rotateYMatrix(float theta)
 {
 	// *** Your code here ***
-	return Eigen::Matrix4f::Identity();
+
+	Eigen::Matrix4f rotate;
+	rotate <<
+		cos(theta), 0, sin(theta), 0,
+		0, 1, 0, 0,
+		-sin(theta), 0, cos(theta), 0,
+		0, 0, 0, 1;
+
+	return rotate;
 }
 
 int main()
@@ -270,8 +292,8 @@ int main()
 	// TIP: Think about the order of your transforms. Do you want to rotate first,
 	//      scale first, or translate first? Does the order matter?
 
-	Eigen::Matrix4f bunnyTransform = Eigen::Matrix4f::Identity();
-	Eigen::Matrix4f dragonTransform = Eigen::Matrix4f::Identity();
+	Eigen::Matrix4f bunnyTransform = Eigen::Matrix4f::Identity() * translationMatrix(Eigen::Vector3f(-0.5, -0.5, 0));
+	Eigen::Matrix4f dragonTransform = Eigen::Matrix4f::Identity() * translationMatrix(Eigen::Vector3f(0.3, 0.1, 0)) * scaleMatrix(1.2) * rotateYMatrix((180 * M_PI)/180);
 
 	// =========== TASK 4 ==============
 	// Prepare your own mesh in blender, exporting as OBJ
