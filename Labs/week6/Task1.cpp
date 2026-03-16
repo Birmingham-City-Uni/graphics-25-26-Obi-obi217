@@ -35,15 +35,15 @@ Eigen::Matrix4f projectionMatrix(int height, int width, float horzFov = 70.f*M_P
 
 	// Make a projection matrix following the formulation in the lecture slides, and using the provided parameters.
 	// First, work out vertical FoV based on the horizontal FoV:
-	float vertFov = horzFov * height / width;
+	float vertFov = (horzFov * height) / width;
 
 	// Now construct the matrix.
 	Eigen::Matrix4f projection;
 	projection <<
-		1 / tanf(0.5f * horzFov), 0, 0, 0,
-		0, 1 / tanf(0.5f * vertFov), 0, 0,
+		1.0f / tanf(0.5f * horzFov), 0, 0, 0,
+		0, 1.0f / tanf(0.5f * vertFov), 0, 0,
 		0, 0, zFar / (zFar - zNear), (-zFar * zNear) / (zFar - zNear),
-		0, 0, 1, 0;
+		0, 0, 1.0f, 0;
 	return projection;
 	// *** END YOUR CODE ***
 }
@@ -120,7 +120,7 @@ void drawTriangle(std::vector<uint8_t>& image, int width, int height,
 			// Work out where to sample in the zBuffer. Remember the zBuffer has only one channel,
 			// so your index should be based on the pixel's x and y locations, and the width of the 
 			// z buffer only.
-			int depthIdx = width * y + x;
+			int depthIdx = y * width + x;
 
 			// If your depth is bigger than the current depth, skip drawing this pixel.
 			// Otherwise, replace the zBuffer value at depthIdx with this depth.
@@ -148,7 +148,7 @@ void drawTriangle(std::vector<uint8_t>& image, int width, int height,
 			// Convert this coordinate to a point in texture space
 			// To do so, multiply by the texWidth and texHeight to get to the correct range.
 			// Don't forget to flip the y coordinates! 
-			int texR = static_cast<int>(1.0f - texP.y() * texHeight);
+			int texR = static_cast<int>((1.0f - texP.y()) * texHeight);
 			int texC = static_cast<int>(texP.x() * texWidth);
 			// Handle the case where texR or texC end up outside the image!
 			// There are different ways you could do this - for example using 
@@ -159,14 +159,17 @@ void drawTriangle(std::vector<uint8_t>& image, int width, int height,
 			texC = std::min(std::max(texC, 0), texWidth - 1);
 
 			// Get the value from the texture (hint: use the getPixel function on the albedoTexture).
-			Color texColor{ 255,255,255,255 };
+			Color texColor = getPixel(albedoTexture, texC, texR, texWidth, texHeight);
 
 			// Convert it into an Eigen::Vector3f as an albedo
 			// (Optional bonus task, if you checked out the slides on gamma correction:
 			// gamma correct this colour, so the texture doesn't appear overly bright.
 			// should you raise to the power 1/2.2, or 2.2?)
-			Eigen::Vector3f albedo = Eigen::Vector3f::Zero();
-
+			Eigen::Vector3f albedo = Eigen::Vector3f(texColor.r, texColor.g, texColor.b) / 255.0f;
+			// Apply sRGB to linear conversion (inverse gamma correction)
+			albedo.x() = powf(albedo.x(), 2.2f);
+			albedo.y() = powf(albedo.y(), 2.2f);
+			albedo.z() = powf(albedo.z(), 2.2f);
 			// *** END YOUR CODE ***
 
 
@@ -271,9 +274,9 @@ void drawMesh(std::vector<unsigned char>& image,
 		// Work out the screen space coordinates based on the image height and width.
 		// Set the z component of each screen coordinate to be the clip-space z (for example
 		// t.screen[0].z() == vClip0.z());
-		t.screen[0] = Eigen::Vector3f(width * (vClip0.x() + 1.0f / 2.0f), height * (vClip0.y() + 1.0f / 2.0f), vClip0.z());
-		t.screen[1] = Eigen::Vector3f(width * (vClip1.x() + 1.0f / 2.0f), height * (vClip1.y() + 1.0f / 2.0f), vClip1.z());
-		t.screen[2] = Eigen::Vector3f(width * (vClip2.x() + 1.0f / 2.0f), height * (vClip2.y() + 1.0f / 2.0f), vClip2.z());
+		t.screen[0] = Eigen::Vector3f(width * (vClip0.x() + 1.0f) / 2.0f, height * (-vClip0.y() + 1.0f) / 2.0f, vClip0.z());
+		t.screen[1] = Eigen::Vector3f(width * (vClip1.x() + 1.0f) / 2.0f, height * (-vClip1.y() + 1.0f) / 2.0f, vClip1.z());
+		t.screen[2] = Eigen::Vector3f(width * (vClip2.x() + 1.0f) / 2.0f, height * (-vClip2.y() + 1.0f) / 2.0f, vClip2.z());
 		// *** END YOUR CODE ***
 
 		// transform the normals (using the inverse transpose of the upper 3x3 block)

@@ -11,8 +11,10 @@
 Eigen::Vector3f reflect(const Eigen::Vector3f& incoming, const Eigen::Vector3f& normal)
 {
 	// *** YOUR CODE HERE ***
-	// replace this with the reflected vector.
-	return Eigen::Vector3f::Zero();
+	const Eigen::Vector3f normIncoming = incoming.normalized();
+	const Eigen::Vector3f normNormal = normal.normalized();
+	const Eigen::Vector3f reflected = normIncoming + 2.f * fabs(normIncoming.dot(normNormal)) * normNormal;
+	return reflected.normalized();
 	// *** END YOUR CODE ***
 }
 
@@ -30,16 +32,16 @@ float phongSpecularTerm(const Eigen::Vector3f& incomingLightDir, const Eigen::Ve
 {
 	// *** YOUR CODE HERE ***
 	// Find the reflected direction using the reflect function
-	Eigen::Vector3f reflectionDir = Eigen::Vector3f::Zero();
+	Eigen::Vector3f reflectionDir = reflect(incomingLightDir, normal);
 
 	// Find dot product between reflected and view directions.
-	float reflectDotNorm = 0.f;
+	float reflectDotNorm = reflectionDir.dot(viewDir);
 
 	// Make sure dot product is non-negative (if it's less than 0, set it to 0!)
-	reflectDotNorm = 0.f;
+	reflectDotNorm = std::max(reflectDotNorm, 0.f);
 
 	// Finally, raise to specular exponent and return.
-	return 0.f;
+	return powf(reflectDotNorm, exponent);
 	// *** END YOUR CODE ***
 }
 
@@ -57,15 +59,21 @@ float blinnPhongSpecularTerm(const Eigen::Vector3f& incomingLightDir, const Eige
 {
 	// *** YOUR CODE HERE ***
 	// Find the half-vector (average of view dir and light dir)
-	Eigen::Vector3f halfVec = Eigen::Vector3f::Zero();
+
+	Eigen::Vector3f normLightDir = incomingLightDir.normalized();
+	Eigen::Vector3f normViewDir = viewDir.normalized();
+
+	Eigen::Vector3f halfVec = (normLightDir + normViewDir) / 2;
+	halfVec = halfVec.normalized();
 
 	// Find dot product of half-vector and normal.
-	float halfDotNorm = 0.f;
+	float halfDotNorm = halfVec.dot(normal);
 	
 	// Force the dot product to be non-negative (if <0, set to 0)
+	halfDotNorm = std::max(halfDotNorm, 0.f);
 
 	//Return the dot product raised to the exponent
-	return 0.f;
+	return powf(halfDotNorm, exponent);
 	// *** END YOUR CODE ***
 }
 
