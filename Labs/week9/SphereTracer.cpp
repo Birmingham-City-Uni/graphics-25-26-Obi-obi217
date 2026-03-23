@@ -85,9 +85,35 @@ bool raySphereIntersection(const Ray& ray, const Sphere& sphere, Vector3f& inter
 	// 5. Find the smallest solution for t that's bigger than minT.
 	//   a. If such a t exists, set the value of "intersection" and "t" and return true.
 	//   b. If no such t exists, return false.
+	Vector3f v = ray.origin - sphere.centre;
+	float A = 1;
+	float B = 2 * v.dot(ray.direction);
+	float C = powf((v.squaredNorm()), 1) - powf(sphere.radius, 2);
 
-	// Remove this existing code, that just always returns false.
-	return false;
+	float discriminant = powf(B, 2) - 4 * A * C;
+
+	if (discriminant < 0) {
+		return false;
+	}
+	else {
+		float t1 = (-B - sqrtf(discriminant)) / (2 * A);
+		float t2 = (-B + sqrtf(discriminant)) / (2 * A);
+
+		if (t1 > minT) {
+			intersection = ray.origin + (t1 * ray.direction);
+			t = t1;
+			return true;
+		}
+		else if (t2 > minT) {
+			intersection = ray.origin + (t2 * ray.direction);
+			t = t2;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
 	// *** END YOUR CODE ***
 } 
 
@@ -99,7 +125,9 @@ Vector3f getSphereNormal(const Sphere& sphere, const Vector3f& location) {
 	// See the slides for more detail.
 	// 
 	// Remove this existing code that just returns 0.
-	return Vector3f::Zero();
+
+	Vector3f normal = (location - sphere.centre).normalized();
+	return normal;
 	// *** END YOUR CODE ***
 }
 
@@ -115,6 +143,8 @@ bool refract(const Vector3f& incident, const Vector3f& norm, float eta, Vector3f
 	// 1. Find the value of the "k" from the lecture slides.
 	// 2. If k < 0, return false (TIR occurs).
 	// 3. Otherwise, find the refracted ray and return true.
+
+
 
 	// This existing code just always returns false.
 	// Remove it when you write your own code!
@@ -219,10 +249,14 @@ Vector3f traceRay(const Ray& ray, const std::vector<Sphere>& spheres, const std:
 		// sphere's own colour. This will allow you to simulate coloured mirrors.
 		// REMINDER: don't forget to increase the value of bounce by 1 when you call traceRay
 		// again recursively! This will make sure you don't exceed the maxBounces bounce count.
+		Vector3f sphereNorm = getSphereNormal(*hitSphere, hitIntersection);
+		Vector3f reflectedDir = reflect(ray.direction, sphereNorm);
+		Ray reflectedRay;
+		reflectedRay.origin = hitIntersection;
+		reflectedRay.direction = reflectedDir.normalized();
+		Vector3f reflectedColour = traceRay(reflectedRay, spheres, lights, bounce + 1);
 
-		// This existing code throws an error as mirror spheres haven't been implemented yet.
-		// Remove it when you've implemented mirrors!
-		throw std::runtime_error("Mirror material not implemented!");
+		return coeffWiseMultiply(reflectedColour, hitSphere->colour);
 		//*** END YOUR CODE
 	}
 	else if (hitSphere->material == Material::REFRACTIVE) {
@@ -300,7 +334,7 @@ int main()
 	spheres.push_back({ Vector3f(0.f, -2.f, 4.f), 0.5f, Material::DIFFUSE, Vector3f(0.2f, 0.2f, 0.8f) });
 	spheres.push_back({ Vector3f(0.f, 1.f, 6.f), 0.3f, Material::DIFFUSE, Vector3f(0.8f, 0.8f, 0.f) });
 	// Task 5: Add a mirror reflective sphere to your scene, and raytrace again!
-	//spheres.push_back({ Vector3f(2.f, 2.f, 4.f), 0.5f, Material::MIRROR, Vector3f(0.9f, 0.9f, 0.9f) });
+	spheres.push_back({ Vector3f(2.f, 2.f, 4.f), 0.5f, Material::MIRROR, Vector3f(0.9f, 0.9f, 0.9f) });
 	// Task 7: Add a refractive sphere to your scene, and raytrace again!
 	//spheres.push_back({ Vector3f(0.f, 0.f, 3.f), 0.5f, Material::REFRACTIVE, Vector3f(0.9f, 0.8f, 0.8f), 1.4f });
 
