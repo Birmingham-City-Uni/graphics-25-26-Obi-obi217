@@ -1,19 +1,40 @@
 #include <iostream>
-#include <string>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include "Model.hpp"
 
 Model::Model(const char *filename) : verts_(), faces_(), vts_() {
+
     std::ifstream in;
     in.open (filename, std::ifstream::in);
     if (in.fail()) throw std::runtime_error("Couldn't open input model file!");
     std::string line;
+
+    // OBJ may not contain any `o` lines; treat everything as one default object.
+    objects_.clear();
+    objects_.push_back(ObjGroup{ "default", 0, 0 });
+
+
+
     while (!in.eof()) {
         std::getline(in, line);
         std::istringstream iss(line.c_str());
         char trash;
+
+        if (!line.compare(0, 2, "o ")) {
+            iss >> trash; // 'o'
+            std::string name;
+            std::getline(iss >> std::ws, name);
+
+            // close previous object
+            objects_.back().faceCount = (int)faces_.size() - objects_.back().faceStart;
+
+            // start new object at current face index
+            objects_.push_back(ObjGroup{ name, (int)faces_.size(), 0 });
+            continue;
+        }
+
         if (!line.compare(0, 2, "v ")) {       // read 2 characters and check the line starts with "v"
             iss >> trash;
             Eigen::Vector3f v;
@@ -49,7 +70,12 @@ Model::Model(const char *filename) : verts_(), faces_(), vts_() {
             faces_.push_back(f);
         }
     }
-    std::cerr << "# v# " << verts_.size() << " f# "  << faces_.size() << std::endl;
+    if (!objects_.empty()) {
+        objects_.back().faceCount = (int)faces_.size() - objects_.back().faceStart;
+    }
+
+    std::cerr << "# v# " << verts_.size() << " f# " << faces_.size()
+        << " o# " << objects_.size() << std::endl;
 }
 
 Model::~Model() {
@@ -82,4 +108,3 @@ Eigen::Vector2f Model::texCoord(int i) const {
 Eigen::Vector3f Model::normal(int i) const {
     return vns_[i];
 }
-

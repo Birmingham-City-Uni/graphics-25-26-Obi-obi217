@@ -1,0 +1,242 @@
+# Blender 5.0.1 MTL File: 'Coursework_scene1.blend'
+# www.blender.org
+
+newmtl GNX:Buick_GNX_1987BadgeA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/BadgeA_DiffuseAOSO.png
+map_d C:/BadgeA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_BadgeA_Normal.png
+
+newmtl GNX:Buick_GNX_1987Base_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl GNX:Buick_GNX_1987Coloured_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Global_Texture_Coloured_Diffuse_P.png
+
+newmtl GNX:Buick_GNX_1987EngineA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/EngineA_DiffuseAOSO.png
+map_d C:/EngineA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_EngineA_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha1A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille1A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille1A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille1A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha2A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille2A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille2A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille2A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha3A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille3A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille3A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille3A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha4A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille4A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille4A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille4A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha5A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille5A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille5A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille5A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha6A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille6A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille6A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille5A_Normal.png
+
+newmtl GNX:Buick_GNX_1987InteriorA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/InteriorA_DiffuseAOSO.png
+map_d C:/InteriorA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_InteriorA_Normal.png
+
+newmtl GNX:Buick_GNX_1987InteriorTillingA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_InteriorTillingA_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_InteriorTillingA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_InteriorTillingA_Normal.png
+
+newmtl GNX:Buick_GNX_1987LightA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_LightA_Diffuse.png
+map_d C:/Buick_GNX_1987_LightA_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987ManufacturerPlateA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_ManufacturerPlateA_Diffuse.png
+map_d C:/Buick_GNX_1987_ManufacturerPlateA_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987Paint_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.010989 0.010989 0.010989
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl GNX:Buick_GNX_1987Textured2A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Textured2A_Diffuse.png
+map_d C:/Buick_GNX_1987_Textured2A_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987TexturedA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_TexturedA_Diffuse.png
+map_d C:/Buick_GNX_1987_TexturedA_Diffuse.png
+
+newmtl Red_glass
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl emiss:Buick_GNX_1987InteriorA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_InteriorA_Emissive.png
+map_d C:/Buick_GNX_1987_InteriorA_Emissive.png
+
+newmtl emiss:Buick_GNX_1987LightEmissiveA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_LightA_Emissive.png
+map_d C:/Buick_GNX_1987_LightA_Emissive.png
+
+newmtl glass_light
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl glass_surr
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl orange_light
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.629000 0.169348 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2

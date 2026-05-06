@@ -1,0 +1,66 @@
+# Blender 5.0.1 MTL File: 'Coursework_scene.blend'
+# www.blender.org
+
+newmtl Chest2
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Chest1_BaseColor.png
+map_Ns C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Chest1_Roughness.png
+map_refl C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Chest1_Metallic.png
+map_Ke C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Chest1_Emissive.png
+
+newmtl Cornea
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/Bake
+
+newmtl Eye
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Eye_BaseColor.tga.png
+
+newmtl Head1
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Head_BaseColor.png
+map_Ns C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Head_Roughness.png
+map_refl C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Head_Metallic.png
+
+newmtl Legs2
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Legs1_BaseColor.png
+map_Ns C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Legs1_Roughness.png
+map_refl C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Legs1_Metallic.png
+map_Ke C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Legs1_Emissive.png
+
+newmtl Mask1
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Mask_BaseColor.png
+map_Ns C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Mask_Roughness.png
+map_refl C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Mask_Metallic.png
+map_Ke C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/textures/Char_cyber_Mask_Emissive.png

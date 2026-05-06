@@ -31,6 +31,8 @@ set(SHADERS_SOURCE_GROUP
     PhongShader.hpp
     MirrorShader.hpp
     TexCoordTestShader.hpp
+    GlassShader.hpp
+    Spotlight.hpp
 )
 
 source_group("Header Files\\Entities" FILES ${ENTITIES_SOURCE_GROUP})

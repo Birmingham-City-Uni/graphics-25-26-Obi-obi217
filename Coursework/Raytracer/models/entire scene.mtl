@@ -1,0 +1,370 @@
+# Blender 5.0.1 MTL File: 'Coursework_scene1.blend'
+# www.blender.org
+
+newmtl Chest2
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Char_cyber_Chest1_BaseColor.png
+map_Ns C:/Char_cyber_Chest1_Roughness.png
+map_refl C:/Char_cyber_Chest1_Metallic.png
+map_Ke C:/Char_cyber_Chest1_Emissive.png
+map_Bump -bm 1.000000 C:/Char_cyber_Chest1_Normal.png
+
+newmtl Cornea
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ashoy/source/repos/graphics-25-26-Obi-obi217/Labs/cyberpunk-character/Bake
+
+newmtl Eye
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Eye_BaseColor.tga.png
+
+newmtl GNX:Buick_GNX_1987BadgeA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/BadgeA_DiffuseAOSO.png
+map_d C:/BadgeA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_BadgeA_Normal.png
+
+newmtl GNX:Buick_GNX_1987Base_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl GNX:Buick_GNX_1987Coloured_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Global_Texture_Coloured_Diffuse_P.png
+
+newmtl GNX:Buick_GNX_1987EngineA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/EngineA_DiffuseAOSO.png
+map_d C:/EngineA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_EngineA_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha1A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille1A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille1A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille1A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha2A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille2A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille2A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille2A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha3A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille3A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille3A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille3A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha4A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille4A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille4A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille4A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha5A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille5A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille5A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille5A_Normal.png
+
+newmtl GNX:Buick_GNX_1987GrilleNoAlpha6A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Grille6A_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_Grille6A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Grille5A_Normal.png
+
+newmtl GNX:Buick_GNX_1987InteriorA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/InteriorA_DiffuseAOSO.png
+map_d C:/InteriorA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_InteriorA_Normal.png
+
+newmtl GNX:Buick_GNX_1987InteriorTillingA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_InteriorTillingA_DiffuseAOSO.png
+map_d C:/Buick_GNX_1987_InteriorTillingA_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_InteriorTillingA_Normal.png
+
+newmtl GNX:Buick_GNX_1987LightA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_LightA_Diffuse.png
+map_d C:/Buick_GNX_1987_LightA_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987ManufacturerPlateA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_ManufacturerPlateA_Diffuse.png
+map_d C:/Buick_GNX_1987_ManufacturerPlateA_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987Paint_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.010989 0.010989 0.010989
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl GNX:Buick_GNX_1987Textured2A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_Textured2A_Diffuse.png
+map_d C:/Buick_GNX_1987_Textured2A_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987TexturedA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_TexturedA_Diffuse.png
+map_d C:/Buick_GNX_1987_TexturedA_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987Window_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.050563 0.050563 0.050563
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.381818
+illum 9
+
+newmtl GNX:Buick_GNX_1987_CallipersCalliperA_Zone_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_CalliperA_Zone_Diffuse.png
+map_d C:/Buick_GNX_1987_CalliperA_Zone_Diffuse.png
+
+newmtl GNX:Buick_GNX_1987_Wheel1A_3D_3DWheel1A_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Wheel1A_DiffuseAOSO.png
+map_d C:/Wheel1A_DiffuseAOSO.png
+map_Bump -bm 1.000000 C:/Buick_GNX_1987_Wheel1A_Normal.png
+
+newmtl Head1
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Char_cyber_Head_BaseColor.png
+map_Ns C:/Char_cyber_Head_Roughness.png
+map_refl C:/Char_cyber_Head_Metallic.png
+
+newmtl Legs2
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Char_cyber_Legs1_BaseColor.png
+map_Ns C:/Char_cyber_Legs1_Roughness.png
+map_refl C:/Char_cyber_Legs1_Metallic.png
+map_Ke C:/Char_cyber_Legs1_Emissive.png
+
+newmtl Mask1
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Char_cyber_Mask_BaseColor.png
+map_Ns C:/Char_cyber_Mask_Roughness.png
+map_refl C:/Char_cyber_Mask_Metallic.png
+map_Ke C:/Char_cyber_Mask_Emissive.png
+
+newmtl Material.001
+Ns 752.161987
+Ka 1.000000 1.000000 1.000000
+Kd 0.008568 0.008568 0.008568
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl Material.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/photomode_16022026_034701.png
+
+newmtl Red_glass
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl emiss:Buick_GNX_1987InteriorA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_InteriorA_Emissive.png
+map_d C:/Buick_GNX_1987_InteriorA_Emissive.png
+
+newmtl emiss:Buick_GNX_1987LightEmissiveA_Material1
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Buick_GNX_1987_LightA_Emissive.png
+map_d C:/Buick_GNX_1987_LightA_Emissive.png
+
+newmtl glass_light
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl glass_surr
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl mat_trashbags
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:/blinn1_Base_color.png
+map_Ns C:/blinn1_Roughness.png
+map_refl C:/blinn1_Metallic.png
+map_Bump -bm 1.000000 C:/blinn1_Normal_OpenGL.png
+
+newmtl orange_light
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.629000 0.169348 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
