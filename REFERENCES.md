@@ -1,11 +1,7 @@
 # References
 
-Use this file to credit any 3rd party resources used to implement your coursework, such as meshes and textures, providing URLs (web links) for each.
+* Cyber-man : https://sketchfab.com/3d-models/cyberpunk-character-bd161bb708a941f0b436c2e95eafc755
+* Car : https://sketchfab.com/3d-models/1987-buick-grand-national-regal-gnx-9aaee7cb9065412892f381e7da013acc
+* Trash bags : https://sketchfab.com/3d-models/literal-pile-of-trash-30ceaf9c8dda4a67aafc544345a5400e
+* Ground texture : https://polyhaven.com/a/coast\_sand\_01
 
-As an example, below I have referenced assets used in the Labs.
-
-## Labs and Coursework Starter Code
-
-* Bunny, Armadillo and Chinese Dragon from the [Stanford 3D Scanning Repository](https://graphics.stanford.edu/data/3Dscanrep/) (models have been tidied and decimated).
-* Textured Stanford Bunny (model and UVs) by [001comic@sketchfab.com](https://sketchfab.com/3d-models/stanford-bunny-883eec40ad724aeab2f3ca101420db33) (some modifications made to texture to avoid seams).
-* Spot the Cow test model by [Keenan Crane](https://www.cs.cmu.edu/~kmcrane/Projects/ModelRepository/#spot)

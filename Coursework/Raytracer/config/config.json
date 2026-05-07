@@ -1,8 +1,8 @@
 {
-    "pixWidth": 192,
-    "pixHeight": 108,
+    "pixWidth": 1920,
+    "pixHeight": 1080,
 
-    "maxBounces": 2,
+    "maxBounces": 5,
 
     "clearColor": [0,0,0,255],
 
@@ -10,8 +10,8 @@
     "cameraForward": [1.0, -0.35, 1.0],
     "cameraUp": [0.0, 1.0, 0.0],
     "samplesPerPixel": 1,
-    "cameraAperture": 0.5,
-    "cameraFocusDist": 8.0,
+    "cameraAperture": 0.3,
+    "cameraFocusDist": 25.0,
 
     "cameraFov": 0.7,
 
